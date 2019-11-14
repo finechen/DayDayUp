@@ -28,58 +28,80 @@
    * status {String} 'pending' | 'fulfilled' | 'rejcted'
    * // 方法
    * then
+   * catch
    * all
    * race
    * reject
    * resolve
    */
 
+  // promise 3种状态
+  const PENDING = 'pending'
+  const FULFILLED = 'fulfilled'
+  const REJECTED = 'rejcted'
 
-  function _Promise(executor) {
+  function MyPromise(executor) {
 
-    const PENDING = 'pending'
-    const FULFILLED = 'fulfilled'
-    const REJECTED = 'rejcted'
-    const _this = this
-
-    let reason = null
-    let value = null
-
-    this.status = PENDING
-
-    function resolve(value) {
-      if (_this.status === PENDING) {
-        _this.status = FULFILLED
-      }
-      _this.value = value
-    }
-
-    function reject(reason) {
-      if (_this.status === PENDING) {
-        _this.status = REJECTED
-      }
-      _this.reason = reason
-    }
-
+    this.status = PENDING // 状态
+    this.result = null // 结果
+    this.queueFulFilled = [] // 成功执行队列
+    this.queueRejected = [] // 失败执行队列
     try {
-      executor(resolve, reject)
+      executor(resolve.bind(this), reject.bind(this))
     } catch (e) {
-      reject(e)
+      reject.bind(this)
     }
 
+
+    // resolve 执行
+    function resolve(value) {
+      console.log('value: ', value)
+      if (this.status === PENDING) {
+        const res = value
+        console.log('res: ', res);
+        this.status = FULFILLED
+        this.result = res
+      }
+    }
+    // reject 执行
+    function reject(value) {
+      console.log('value: ', value);
+      if (this.status === PENDING) {
+        const res = value
+        this.status = REJECTED
+        this.result = res
+      }
+    }
   }
-  _Promise.prototype = {
-    constructor: _Promise,
-    then() {}
+  MyPromise.prototype = {
+    // 中间件 下一步
+    next() {
+      let fn = this.queue.shift()
+      fn && fn()
+    },
+    then() {
+      if()
+      return this
+    },
+    catch () {
+      return this
+    }
   }
 
-  const myPromise = new _Promise((resolve, reject) => {
-    resolve(1)
+
+  const myPromise = new MyPromise((resolve, reject) => {
+    const num = Math.floor(Math.random() * 10)
+    console.log('num: ', num);
+    if (num >= 5) {
+      resolve(num)
+    } else {
+      reject(num)
+    }
   }).then((res) => {
-    console.log('myPromise', res)
+    console.log('res: ', res);
+  }).catch(err => {
+    console.log('err: ', err);
   })
-
-  console.log('myPromise: ', myPromise);
 </script>
 
 </html>
