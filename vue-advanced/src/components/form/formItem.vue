@@ -37,7 +37,6 @@ export default {
       const rules = this.form.rules[this.prop]
       // npm i async-validate -S
       const desc = { [this.prop]: rules }
-      console.log('desc: ', desc);
       const schema = new Schema(desc)
       // return的是校验结果的promise
       const res = schema.validate({ [this.prop]: value }, err => {
@@ -49,7 +48,6 @@ export default {
           return true
         }
       })
-      console.log('res: ', res);
       return res
     }
   }

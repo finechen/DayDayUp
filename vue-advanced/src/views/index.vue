@@ -16,7 +16,8 @@
 import DiyForm from '../components/form/form.vue'
 import DiyFormItem from '../components/form/formItem.vue'
 import DiyFormInput from '../components/form/formInput.vue'
-
+import Notification from '../components/notification/index.vue'
+import create from '../utils/create'
 
 export default {
   name: 'Index',
@@ -38,11 +39,19 @@ export default {
     submitForm (form) {
       this.$refs[form].validate(valid => {
         console.log('valid:--------------------- ', valid);
-        if (valid) {
-          alert('校验通过')
-        } else {
-          alert('校验失败')
-        }
+        // if (valid) {
+        //   alert('校验通过')
+
+        // } else {
+        //   alert('校验失败')
+        // }
+
+        const notice = create(Notification, {
+          title: '检验结果',
+          message: valid ? '校验通过' : '校验失败',
+          duration: 2000
+        })
+        notice.show()
       })
     }
   }
