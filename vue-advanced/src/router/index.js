@@ -9,6 +9,11 @@ const routes = [{
     name: 'Index',
     component: Index
   },
+  {
+    path: '/tree',
+    name: 'Tree',
+    component: () => import( /* webpackChunkName: "about" */ '../views/tree.vue')
+  },
   // {
   //   path: '/about',
   //   name: 'About',

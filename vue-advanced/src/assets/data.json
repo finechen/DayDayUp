@@ -1,0 +1,24 @@
+{
+  "title": "web全栈架构师",
+  "children": [{
+      "title": "Java架构师"
+    },
+    {
+      "title": "JS 高级",
+      "children": [{
+          "title": "ES6"
+        },
+        {
+          "title": "设计模式",
+          "children": [{
+              "title": "工厂模式"
+            },
+            {
+              "title": "发布-订阅模式"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
