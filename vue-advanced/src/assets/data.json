@@ -11,7 +11,14 @@
         {
           "title": "设计模式",
           "children": [{
-              "title": "工厂模式"
+              "title": "工厂模式",
+              "children": [{
+                  "title": "简单工厂模式"
+                },
+                {
+                  "title": "抽象工厂模式"
+                }
+              ]
             },
             {
               "title": "发布-订阅模式"
