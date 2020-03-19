@@ -6,7 +6,7 @@
 
 <script >
 export default {
-  name: 'FormInputy',
+  name: 'FormInput',
   inheritAttrs: false,
   props: {
     value: {
