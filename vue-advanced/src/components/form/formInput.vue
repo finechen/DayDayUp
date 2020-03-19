@@ -6,7 +6,7 @@
 
 <script >
 export default {
-  name: 'FormInputy',
+  name: 'FormInput',
   inheritAttrs: false,
   props: {
     value: {
@@ -18,11 +18,6 @@ export default {
       errMsg: ''
     };
   },
-  // mounted () {
-  //   this.$on('validate', () => {
-  //     this.validate();
-  //   });
-  // },
   methods: {
     onInput (e) {
       this.$emit('input', e.target.value);
