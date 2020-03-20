@@ -1,15 +1,17 @@
 <template>
-  <diy-form :model="model" :rules="rules" ref="form">
-    <diy-form-item label="用户名" prop="name">
-      <diy-form-input v-model="model.name" autocomplete="off" placeholder="username"></diy-form-input>
-    </diy-form-item>
-    <diy-form-item label="密码" prop="pwd">
-      <diy-form-input v-model="model.pwd"></diy-form-input>
-    </diy-form-item>
-    <diy-form-item>
-      <input type="submit" @click="submitForm('form')" value="提交" />
-    </diy-form-item>
-  </diy-form>
+  <div>
+    <diy-form :model="model" :rules="rules" ref="form">
+      <diy-form-item label="用户名" prop="name">
+        <diy-form-input v-model="model.name" autocomplete="off" placeholder="username"></diy-form-input>
+      </diy-form-item>
+      <diy-form-item label="密码" prop="pwd">
+        <diy-form-input v-model="model.pwd"></diy-form-input>
+      </diy-form-item>
+      <diy-form-item>
+        <input type="submit" @click="submitForm('form')" value="提交" />
+      </diy-form-item>
+    </diy-form>
+  </div>
 </template>
 
 <script>
