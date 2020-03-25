@@ -97,7 +97,12 @@ const routes = [{
   {
     path: '/tree',
     name: 'Tree',
-    component: () => import( /* webpackChunkName: "about" */ '../views/tree.vue')
+    component: () => import( /* webpackChunkName: "tree" */ '../views/tree.vue')
+  },
+  {
+    path: '/vuex',
+    name: 'Vuex',
+    component: () => import( /* webpackChunkName: "vuex" */ '../views/vuex.vue')
   },
   // {
   //   path: '/about',
