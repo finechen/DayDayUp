@@ -1,6 +1,6 @@
 #### 简易版element组件el-form
 
-1. ##### el-form的使用
+1. ##### 我们看看el-form是怎么使用的
 
    ```vue
    <el-form ref="form"  :model="form" :rules="rules" label-width="80px">
@@ -41,7 +41,7 @@
    </script>
    ```
 
-   先分析结构：可以看到，在form组件中，每一个表单域都由form-item组成，表单域中可以放置input等表单控件。根据代码结构划分，我们开始建立文件夹，文件结构如下（基于vue/cli3.x）
+   2.代码开始前先分析结构：可以看到，在form组件中，每一个表单域都由form-item组成，表单域中可以放置input等表单控件。根据代码结构划分，我们开始建立文件夹，文件结构如下（基于vue/cli3.x）
 
    ```
    └─src
@@ -58,14 +58,14 @@
                index.vue
    ```
 
-   再分析功能：
+   3. 分析完结构，再分析功能：
 
    ​	input : 
 
    ​	form-item: 
 
    ​	form：需要承载表单域
-   接下来就是实现功能了！
+   4. 接下来就是实现功能了！
 
    ```vue
    <!-- formInput.vue -->
