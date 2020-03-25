@@ -1,3 +1,4 @@
+<!-- formItem.vue -->
 <template>
   <div>
     <label v-if="label" for="">{{ label }}</label>
@@ -32,6 +33,7 @@ export default {
     })
   },
   methods: {
+    // 校验单项表单结果，并将结果返回给父级
     validate () {
       const value = this.form.model[this.prop]
       const rules = this.form.rules[this.prop]

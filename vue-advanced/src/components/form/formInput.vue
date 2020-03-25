@@ -1,3 +1,4 @@
+
 <template>
   <div>
     <input type="text" :value="value" @input="onInput" v-bind="$attrs">
@@ -19,8 +20,10 @@ export default {
     };
   },
   methods: {
+    // 监听输入框变化
     onInput (e) {
-      this.$emit('input', e.target.value);
+      // this.$emit('input', e.target.value);
+      // 输入框变化后进行检验通知
       this.$parent.$emit('validate');
     }
   }
