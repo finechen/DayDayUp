@@ -44,4 +44,9 @@
      fn && fn()
    }
  }
- const lazyman = new LazyMan('Pikky').eat('Breakfest').sleep(4).eat('Launch').sleep(5).eat('Dinner').sleep(8)
+ const lazyman = new LazyMan('Pikky').eat('Breakfest')
+ lazyman.sleep(4)
+ lazyman.eat('Launch')
+ lazyman.sleep(5)
+ lazyman.eat('Dinner')
+ lazyman.sleep(8)
