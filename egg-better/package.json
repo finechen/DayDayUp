@@ -26,7 +26,7 @@
     "egg": "^2.6.1",
     "egg-cors": "^2.2.3",
     "egg-scripts": "^2.6.0",
-    "npm": "^6.14.5"
+    "npm": "^6.14.6"
   },
   "devDependencies": {
     "@types/mocha": "^2.2.40",
