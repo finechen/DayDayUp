@@ -72,6 +72,7 @@ class LazyMan {
     return this
   }
 }
+
 const lazyman = new LazyMan('Pikky').eat('Breakfest')
 lazyman.sleep(4)
 lazyman.eat('Launch')
