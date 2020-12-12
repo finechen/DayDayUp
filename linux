@@ -69,6 +69,7 @@ useradd -d /home/yunwei fine      // 将用户添加到运维目录下
 用户切换
 su - root
 su - fine
+exit 退出当前用户，回到上一个用户
 
 给用户指定修改密码
 passwd 用户名
