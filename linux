@@ -7,8 +7,3 @@ nvm ls-remote   罗列远程的node版本
 nvm current   查看当前正在使用的node版本
 nvm alias default v4.3.0   切换v.4.3.0为默认版本,每次新建的命令行中就是默认的版本了
 npm list --depth=0 -g 查看全局都安装了那些npm的包
-
-作者：nanfeiyan
-链接：https://juejin.cn/post/6844903854836809736
-来源：掘金
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
