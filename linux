@@ -91,9 +91,9 @@ usermod -g 组名 用户名
 
 
 用户相关文件夹
-vim /etc/shadow
-vim /etc/group
-vim /etc/passwd
+vim /etc/shadow   密码配置文件（加密）
+vim /etc/group    组配置文件
+vim /etc/passwd   用户配置文件
 
 
 =======================
@@ -222,6 +222,33 @@ grep [选项] 查找内容 源文件
 cat bb.txt | grep hello        // 查找bb.txt中含有 hello 内容
 cat bb.txt | grep -n 423       // 查找bb.txt中含有 hello 内容，并显示行号
 cat bb.txt | grep -ni 423      // 查找bb.txt中含有 hello 内容，并显示行号（不区分大小写）
+
+==============================
+压缩解压缩
+==============================
+...
+
+
+
+
+==============================
+组管理与权限管理
+==============================
+组的基本介绍
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
