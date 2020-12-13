@@ -78,6 +78,16 @@ passwd 用户名
 userdel 用户名
 userdel -r 删除用户及其家目录
 
+增加组名
+groupadd 组名
+删除组名
+groupdel 组名
+创建指定组下用户
+sudo useradd -g yunwei xb
+查看用户
+id 用户名
+修改用户组名
+usermod -g 组名 用户名
 
 
  
