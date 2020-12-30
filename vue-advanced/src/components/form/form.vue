@@ -1,3 +1,4 @@
+<!-- form.vue -->
 <template>
   <form action="javascript:void(0);">
     <slot></slot>
@@ -28,13 +29,17 @@ export default {
     }
   },
   methods: {
+    // 校验表单
     validate (cb) {
+      // 所有表单检验结果
       const tasks = this.$children
         .filter(item => item.prop)
         .map(item => item.validate())
       Promise.all(tasks).then((res) => {
+        // 全校验通过返回 true
         cb(true)
       }).catch(() => {
+        // 有一个不通过即返回 false
         cb(false)
       })
 

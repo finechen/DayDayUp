@@ -1,3 +1,4 @@
+
 <template>
   <div>
     <input type="text" :value="value" @input="onInput" v-bind="$attrs">
@@ -6,7 +7,7 @@
 
 <script >
 export default {
-  name: 'FormInputy',
+  name: 'FormInput',
   inheritAttrs: false,
   props: {
     value: {
@@ -18,14 +19,11 @@ export default {
       errMsg: ''
     };
   },
-  // mounted () {
-  //   this.$on('validate', () => {
-  //     this.validate();
-  //   });
-  // },
   methods: {
+    // 监听输入框变化
     onInput (e) {
-      this.$emit('input', e.target.value);
+      // this.$emit('input', e.target.value);
+      // 输入框变化后进行检验通知
       this.$parent.$emit('validate');
     }
   }

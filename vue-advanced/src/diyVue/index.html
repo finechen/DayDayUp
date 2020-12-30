@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <div id="app">
+      <p>{{name}}</p>
+      <p d-text="name"></p>
+      <p>{{age}}</p>
+      <p>
+        {{doubleAge}}
+      </p>
+      <input type="text" d-model="name" />
+      <button @click="hcangeName">赫赫</button>
+      <div k-html="html"></div>
+    </div>
+  </body>
+  <script src="./compile.js"></script>
+  <script src="./diyVue.js"></script>
+  <script>
+    console.log('DiyVue: ', DiyVue)
+    const app = new DiyVue({
+      el: '#app',
+      data: {
+        name: 'I am test',
+        age: 12,
+        doubleAge: 24
+      },
+      created() {
+        console.log('开始啦')
+        setTimeout(() => {
+          this.name = '我是测试'
+        }, 1500)
+      },
+      methods: {
+        chageName() {
+          this.name = 'Hello World'
+          this.age = 1
+        }
+      }
+    })
+
+    app.$data.test = 'Hello DiyVue'
+  </script>
+</html>

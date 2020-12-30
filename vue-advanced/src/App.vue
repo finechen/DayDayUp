@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <router-link to="/">表单页</router-link> - <router-link to="/tree">树形组件递归</router-link>
     <router-view />
   </div>
 </template>
